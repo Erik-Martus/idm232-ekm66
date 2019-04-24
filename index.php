@@ -61,6 +61,7 @@
       </div>
       <a href="#" class="navLink">All Recipes</a>
       <a href="about.php" class="navLink">About Us</a>
+      <a href="contact.php" class="navLink">Contact Us</a>
     </nav>
   </header>
 
@@ -68,7 +69,7 @@
     <section id="hero">
       <a href="recipeTemplate.php"><img src="img/recipes/ancho-orange_chicken/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="Ancho-Orange Chicken"></a>
       <h3>Ancho-Orange Chicken</h3>
-      <p>Weʼre amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice in this recipe. On the side, roasted carrots and lightly creamy, golden raisin-studded rice perfectly accent the sweetness of the glaze.</p>
+      <h5 class="subtitle">with Kale, Rice & Roasted Carrots</h5>
       <a href="recipeTemplate.php">Get Cooking</a>
     </section>
 
@@ -81,16 +82,44 @@
       <p>Cooking isn't difficult, everyone can do it (yes, even you). Our recipes come with step-by-step instructions that guide you from raw ingredients through finished meal.</p>
       <h3>Perfection Every Time</h3>
       <p>With our help you will be able to prepare delicious food at home and achieve perfection every time. Satisfaction guaranteed.</p>
-      <a href="about.php">Learn More</a>
+      <a href="about.php" class="button">Learn More</a>
     </section>
 
     <!-- Featured Recipes -->
     <secion id="featured">
       <h2>Featured Meals</h2>
+      <div class="meal">
+        <img src="img/recipes/beef_medallions_and_mushroom_sauce/0101_2PM_Steak-Diane_97315_SQ_hi_res.jpg" alt="Beef Medallions & Mushroom Sauce">
+        <h4>Beef Medallions & Mushroom Sauce</h4>
+        <h5 class="subtitle">with Mashed Potatoes</h5>
+        <p>In this easy recipe, inspired by steak Diane (an American...</p>
+        <a href="#">Get Cooking</a>
+      </div>
+      <div class="meal">
+        <img src="img/recipes/brocolli_and_basil_pesto_sandwhiches/1225_FPV_Pesto_-Broccoli-Sandwich_74916_WEB_SQ_hi_res.jpg" alt="Brocolli and Basil Pesto Sandwhiches">
+        <h4>Broccoli & Basil Pesto Sandwiches</h4>
+        <h5 class="subtitle">with Romaine & Citrus Salad</h5>
+        <p>These Italian focaccia sandwiches are layered with broccoli, three cheeses...</p>
+        <a href="#">Get Cooking</a>
+      </div>
     </secion>
   </main>
 
   <footer>
+    <div id="social">
+      <h6>Follow Us</h6>
+      <img src="img/social/facebook.svg" alt="Facebook Logo">
+      <img src="img/social/twitter.svg" alt="Twitter Logo">
+      <img src="img/social/instagram.svg" alt="Instagram Logo">
+    </div>
+    <div id="footerNav">
+      <ul>
+        <li class="footLink"><a href="index.php">Home</a></li>
+        <li class="footLink"><a href="about.php">About Us</a></li>
+        <li class="footLink"><a href="contact.php">Contact Us</a></li>
+        <li class="footLink"><a href="support.php">Support</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>
