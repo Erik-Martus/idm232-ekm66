@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Typkit Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/qzq6gzd.css">
+  <link rel="stylesheet" href="css/main.css">
+
   <title>Home Chef - No Results</title>
 </head>
 <body>
 <header>
-    <a href="index.php"><img src="img/logo.svg" alt="Home Chef Logo"></a>
+    <a href="index.php"><img id="logo" src="img/logo.svg" alt="Home Chef Logo"></a>
     <span id="search"><img src="img/search.svg" alt="Search Icon"></span>
     <form action="">
       <input type="search" name="search" id="search">

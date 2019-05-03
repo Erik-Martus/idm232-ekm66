@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Typkit Fonts -->
+  <link rel="stylesheet" href="https://use.typekit.net/qzq6gzd.css">
+  <link rel="stylesheet" href="css/main.css">
+
   <title>Home Chef - Search</title>
 </head>
 <body>
 <header>
-    <a href="index.php"><img src="img/logo.svg" alt="Home Chef Logo"></a>
+    <a href="index.php"><img id="logo" src="img/logo.svg" alt="Home Chef Logo"></a>
     <span id="search"><img src="img/search.svg" alt="Search Icon"></span>
     <form action="">
       <input type="search" name="search" id="search">
@@ -91,10 +98,10 @@
       </div>
       <div class="result">
         <a href="#" class="resultLink">
-          <img src="img/recipes/" alt="">
-          <h4></h4>
-          <h5></h5>
-          <p></p>
+          <img src="img/recipes/parmesan-crusted_chicken/0108_FPP_Baked-Parmesan-Chicken_98333_WEB_Center_hi_res.jpg" alt="Parmesan-Crusted Chicken">
+          <h4>Parmesan-Crusted Chicken</h4>
+          <h5>with Mashed Sweet Potatoes & Roasted Broccoli</h5>
+          <p>In this simple, seasonal recipe, youʼll coat chicken in a...</p>
           <a href="#">Get Cooking</a>
         </a>
       </div>
