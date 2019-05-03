@@ -1,0 +1,40 @@
+/* ! --------- Typekit Fonts --------------- 
+* Bourbon Oblique
+    font-family: bourbon, serif;
+    font-weight: 400;
+    font-style: italic;
+
+* Bourbon Regular
+    font-family: bourbon, serif;
+    font-weight: 400;
+    font-style: normal;
+
+* FF Ernestine Pro Demibold
+    font-family: ff-ernestine-pro, serif;
+    font-weight: 600;
+    font-style: normal;
+*/
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #1b1b1b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ff-ernestine-pro, serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ! ------------- Header ------------------ **/
+header {
+  height: 125px;
+}
