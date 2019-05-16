@@ -41,13 +41,15 @@
 
 :root {
   /* Colors */
-  --hc_red: #CC0033;
-  --hc_red-dark: #990000;
-  --hc_black: #1b1b1b;
-  --hc_gray-light: #f3f3f3;
-  --hc_gray-dark: #c0c0c0;
+  --clr_red: #CC0033;
+  --clr_red-dark: #990000;
+  --clr_black: #1b1b1b;
+  --clr_gray-light: #f3f3f3;
+  --clr_gray-dark: #858383;
 
-  --item_separator: 1px solid var(--hc_black);
+  --fnt_heading-fam: 'ff-ernestine-pro', serif;
+
+  --item_separator: 1px solid var(--clr_black);
 }
 
 html {
@@ -60,16 +62,20 @@ html {
 }
 
 body {
-  color: var(--hc_black);
+  color: var(--clr_black);
   font: 1rem/1.5 'roboto', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ff-ernestine-pro', serif;
+  font-family: var(--fnt_heading-fam);
   font-weight: 600;
   font-style: normal;
   margin-top: .25rem;
   margin-bottom: .75rem;
+}
+
+h1 {
+  font-size: 2rem;
 }
 
 h2 {
@@ -82,11 +88,11 @@ p {
 
 a:link, a:visited {
   text-decoration: none;
-  color: var(--hc_red);
+  color: var(--clr_red);
 }
 
 a:hover {
-  color: var(--hc_red-dark);
+  color: var(--clr_red-dark);
 }
 
 img {
@@ -98,22 +104,28 @@ img {
 }
 
 .red-btn {
-  background-color: var(--hc_red) !important;
+  background-color: var(--clr_red) !important;
   color: #fff !important;
 }
 
 .red-btn:hover, .red-btn:active, .red-btn:focus {
-  background-color: var(--hc_red-dark) !important;
+  background-color: var(--clr_red-dark) !important;
   cursor: pointer;
 }
 
 /* ! ------------- HEADER ------------------ **/
 header {
-  height: 4rem;
   width: 100%;
-  position: sticky;
+  position: relative;
+  background-color: #fff;
+}
+
+#top_bar {
+  height: 4rem;
   z-index: 100;
   background-color: #fff;
+  box-shadow: 0 .0625rem .25rem var(--clr_gray-dark);
+
 }
 
 #logo {
@@ -122,7 +134,7 @@ header {
   cursor: pointer;
 }
 
-#hc-logo {
+#hc-logo-svg {
   height: 3.75rem;
 }
 
@@ -150,16 +162,17 @@ header {
   display: block;
   width: 100%;
   height: .35rem;
-  background-color: var(--hc_black);
+  background-color: var(--clr_black);
 }
 
 /* * ----- DROP DOWN MENU ----- * */
 #menu {
   position: absolute;
-  z-index: 100;
+  z-index: 80;
   width: 100%;
   background-color: #fff;
   top: 3.75rem;
+  box-shadow: 0 .0625rem .25rem var(--clr_gray-dark);
 }
 
 /* ----- SEARCH ----- */
@@ -205,7 +218,7 @@ header {
 }
 
 #filter_drop {
-  background-color: var(--hc_gray-light); /* TODO: change this gray */
+  background-color: var(--clr_gray-light); /* TODO: change this gray */
   margin-top: -1rem;
   padding: 1rem 0 .25rem;
 }
@@ -255,7 +268,7 @@ nav {
   margin-bottom: .05rem;
   display: block;
   padding: .5rem;
-  /* background-color: var(--hc_red);
+  /* background-color: var(--clr_red);
   color: #fff !important; */
   font-family: 'ff-ernestine-pro', serif;
   text-align: center;
@@ -263,7 +276,7 @@ nav {
 
 
 /* .nav_link:hover {
-  background-color: var(--hc_red-dark);
+  background-color: var(--clr_red-dark);
 } */
 
 /* ! ------------- MAIN ------------------ ! */
@@ -300,7 +313,7 @@ section {
 #mission {
   margin: 0 -.5rem 1.5rem;
   padding: .5rem;
-  background-color: var(--hc_gray-light); /* TODO: fix this gray (make new var) */
+  background-color: var(--clr_gray-light); /* TODO: fix this gray (make new var) */
 }
 
 .recipe {
@@ -342,7 +355,7 @@ section {
 
 /* ! ------------- FOOTER ------------------ ! */
 footer {
-  background-color: var(--hc_gray-light);
+  background-color: var(--clr_gray-light);
   padding: 1rem .5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -378,9 +391,157 @@ footer {
 }
 
 .foot_link a:link, .foot_link a:visited {
-  color: var(--hc_gray-dark);
+  color: var(--clr_gray-dark);
 }
 
 .foot_link a:hover, .foot_link a:focus, .foot_link a:active {
-  color: var(--hc_black);
+  color: var(--clr_black);
+}
+
+/* ! ------------- REC TEMPLATE ------------------ ! */
+#rec-title {
+  margin-bottom: .25rem;
+  line-height: 1.25;
+}
+
+#rec-sides {
+  font-size: 1.25rem;
+  text-align: left;
+  color: var(--clr_gray-dark);
+}
+
+#rec-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 18rem;
+  grid-column-gap: .75rem;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rec-stats .info {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid var(--clr_gray-dark);
+  padding: .5rem 0;
+}
+
+.rec {
+  margin-bottom: 2.5rem;
+}
+
+#rec-desc p:first-of-type::first-letter {
+  color: var(--clr_red);
+  float: left;
+  font-family: var(--fnt_heading-fam);
+  font-size: 3rem;
+  line-height: 60;
+  padding-top: .5rem;
+  padding-right: .5rem;
+  padding-left: .25rem;
+}
+
+#rec-info h3 {
+  font-size: 1.5rem;
+}
+
+#rec-info section {
+  margin-bottom: 1.25rem;
+}
+
+#ing_list {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+#ing_list li {
+  margin-bottom: .5rem;
+}
+
+/* #img_toggle {
+  display: flex;
+  align-items: center;
+}
+
+#img_toggle > p {
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+.btn {
+  border: .125rem solid var(--clr_black);
+  display: inline-block;
+  padding: .35rem;
+  position: relative;
+  text-align: center;
+  transition: background 600ms ease, color 600ms ease;
+}
+
+input[type="radio"].toggle {
+  display: none;
+}
+input[type="radio"].toggle + label {
+  cursor: pointer;
+  min-width: 3.5rem;
+}
+input[type="radio"].toggle + label:hover {
+  background: none;
+  color: var(--clr_black);
+}
+input[type="radio"].toggle + label:after {
+  background: var(--clr_black);
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: -1;
+}
+input[type="radio"].toggle.toggle-left + label {
+  border-right: 0;
+}
+input[type="radio"].toggle.toggle-left + label:after {
+  left: 100%;
+}
+input[type="radio"].toggle.toggle-right + label {
+  margin-left: -.125rem;
+}
+input[type="radio"].toggle.toggle-right + label:after {
+  left: -100%;
+}
+input[type="radio"].toggle:checked + label {
+  cursor: default;
+  color: #fff;
+  transition: color 200ms;
+}
+input[type="radio"].toggle:checked + label:after {
+  left: 0;
+} */
+
+#dir_list {
+  list-style: none;
+  counter-reset: hc_counter;
+}
+
+#dir_list li {
+  counter-increment: hc_counter;
+  position: relative;
+}
+
+#dir_list li::before {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  content: counter(hc_counter);
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--clr_red);
+  left: -2.5rem;
+  border-radius: 50%;
+  font-family: var(--fnt_heading-fam);
+  color: #fff;
+  top: -.25rem;
 }
