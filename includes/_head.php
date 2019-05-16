@@ -46,7 +46,7 @@
           <!-- put in png -->
         </object>
         <form action="">
-          <input type="search" name="search" id="search">
+          <input type="search" name="search" id="search" placeholder="Search Recipes">
         </form>
       </span>
       <div id="filters"> 

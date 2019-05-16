@@ -4,8 +4,10 @@
 
 <main>
   <section id="hero">
-    <a href="recipeTemplate.php"><img src="img/recipes/ancho-orange_chicken/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="Ancho-Orange Chicken"></a>
-    <h3>Ancho-Orange Chicken</h3>
+    <a id="hero_img" href="recipeTemplate.php">
+      <img src="img/recipes/01/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="Ancho-Orange Chicken">
+      <h3>Ancho-Orange Chicken</h3>
+    </a>
     <h5 class="rec_subtitle">with Kale, Rice & Roasted Carrots</h5>
     <a class="red-btn rec-btn" href="recipeTemplate.php">Get Cooking</a>
   </section>
@@ -26,14 +28,14 @@
   <secion id="featured">
     <h2>Featured Meals</h2>
     <div class="recipe">
-      <img class="rec_img" src="img/recipes/beef_medallions_and_mushroom_sauce/0101_2PM_Steak-Diane_97315_SQ_hi_res.jpg" alt="Beef Medallions & Mushroom Sauce">
+      <img class="rec_img" src="img/recipes/02/0101_2PM_Steak-Diane_97315_SQ_hi_res.jpg" alt="Beef Medallions & Mushroom Sauce">
       <h4 class="rec_title">Beef Medallions & Mushroom Sauce</h4>
       <h5 class="rec_subtitle">with Mashed Potatoes</h5>
       <p class="rec_desc">In this easy recipe, inspired by steak Diane (an American...</p>
       <a class="red-btn rec-btn" href="#">Get Cooking</a>
     </div>
     <div class="recipe">
-      <img class="rec_img" src="img/recipes/brocolli_and_basil_pesto_sandwhiches/1225_FPV_Pesto_-Broccoli-Sandwich_74916_WEB_SQ_hi_res.jpg" alt="Brocolli and Basil Pesto Sandwhiches">
+      <img class="rec_img" src="img/recipes/03/1225_FPV_Pesto_-Broccoli-Sandwich_74916_WEB_SQ_hi_res.jpg" alt="Brocolli and Basil Pesto Sandwhiches">
       <h4 class="rec_title">Broccoli & Basil Pesto Sandwiches</h4>
       <h5 class="rec_subtitle">with Romaine & Citrus Salad</h5>
       <p class="rec_desc">These Italian focaccia sandwiches are layered with...</p>

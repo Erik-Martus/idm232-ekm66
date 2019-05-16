@@ -5,6 +5,5 @@
     <li><a href="recipeTemplate.php">Recipe Template</a></li>
     <li><a href="search.php">Search/Filter Results Template</a></li>
     <li><a href="noresults.php">No Results Page</a></li>
-    <li><a href="support.php">Help Page</a></li>
   </ul>
 </div>
