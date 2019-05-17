@@ -24,7 +24,7 @@
       </div>
 
       <div class="recipe">
-        <img class="rec_img" src="img/recipes/16/0108_FPP_Baked-Parmesan-Chicken_98333_WEB_Center_hi_res.jpg" alt="Parmesan-Crusted Chicken">
+        <img class="rec_img" src="img/recipes/15/0108_FPP_Baked-Parmesan-Chicken_98333_WEB_Center_hi_res.jpg" alt="Parmesan-Crusted Chicken">
         <h4 class="rec_title">Parmesan-Crusted Chicken</h4>
         <h5 class="rec_subtitle">with Mashed Sweet Potatoes & Roasted Broccoli</h5>
         <p class="rec_desc">In this simple, seasonal recipe, youʼll coat chicken in a...</p>
