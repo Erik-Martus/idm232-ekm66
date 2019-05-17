@@ -1,12 +1,21 @@
 // ! Menu Toggle
 var burger = document.getElementById("burger"); // Hamburger icon
 var menu = document.getElementById("menu"); // Drop down
+var viewport = window.innerWidth || document.documentElement.clientWidth;
 
 burger.addEventListener('mousedown', function () {
-  if (menu.classList.contains("hidden")) {
-    menu.classList.remove("hidden");
+  if (menu.classList.contains("menu_hidden")) {
+    menu.classList.remove("menu_hidden");
   } else {
-    menu.classList.add("hidden");
+    menu.classList.add("menu_hidden");
+  }
+}, false);
+
+window.addEventListener('resize', function () {
+  if (viewport > 1024) {
+    console.log('Desktop');
+  } else {
+    console.log('tablet');
   }
 }, false);
 
@@ -21,25 +30,3 @@ toggle.addEventListener('mousedown', function () {
     filters.classList.add("hidden");
   }
 }, false);
-
-// ! Recipe Image Toggle
-// This does not work yet, it will be revisited later.
-var img_on = document.getElementById("toggle-on"); // "On" Radio button
-var img_off = document.getElementById("toggle-off"); // "Off" Radio button
-var rec_steps = document.getElementById("dir_list"); // step by step directions
-var step_img = document.getElementsByClassName("step_img");
-console.log("TCL: step_img", step_img)
-
-img_on.addEventListener('mousedown', function () {
-  if (step_img.classList.contains("hidden") = true) {
-    // step_img.classList.remove("hidden");
-    console.log('True')
-  }
-}, false);
-
-img_off.addEventListener('mousedown', function () {
-  step_img.classList.add("hidden");
-  console.log('show')
-}, false);
-
-// ! 
