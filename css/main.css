@@ -119,6 +119,10 @@ form {
   display: none !important;
 }
 
+.menu_hidden {
+  display: none !important;
+}
+
 .red-btn {
   background-color: var(--clr_red) !important;
   color: #fff !important;
@@ -300,7 +304,13 @@ nav {
 
 /* ! ------------- MAIN ------------------ ! */
 main {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  max-width: 74rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 section {
@@ -330,10 +340,11 @@ section {
 }
 
 #mission {
-  margin: 0 -.5rem 1.5rem;
-  padding: .5rem;
+  margin: 0 -100rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: var(--clr_gray-light);
-  /* TODO: fix this gray (make new var) */
+  max-width: 60rem;
+  width: 100vw;
 }
 
 #featured {
@@ -346,14 +357,25 @@ section {
   display: grid;
   grid-template-columns: 8rem auto;
   grid-template-areas:
-    "img title"
-    "img subtitle"
-    "img desc"
-    "img btn";
+    "img title""img subtitle""img btn";
   grid-column-gap: .5rem;
   margin-bottom: 1rem;
   width: 100%;
   max-width: 36rem;
+}
+
+.recipe::after {
+  content: "";
+  width: 10rem;
+  height: .1rem;
+  background: var(--clr_red);
+  justify-self: center;
+  grid-column: 1 / 3;
+  margin-top: 1rem;
+}
+
+.recipe:last-of-type::after {
+  content: none;
 }
 
 .rec_img {
@@ -651,5 +673,119 @@ input[type="radio"].toggle:checked + label:after {
 
   #rec-info section {
     margin-bottom: 2.5rem;
+  }
+}
+
+/* * ------------- DESKTOP ------------------ * */
+@media screen and (min-width: 1024px) {
+  .menu_hidden {
+    display: block !important;
+  }
+
+  #burger {
+    display: none;
+  }
+
+  #featured {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #featured h2 {
+    text-align: center;
+    grid-column: 1 /4;
+  }
+
+  .recipe {
+    padding: .5rem;
+  }
+
+  #rec-wrap {
+    display: grid;
+    grid-template-columns: 20rem auto;
+    grid-column-gap: 2rem;
+  }
+
+  #rec-info {
+    grid-column: 1 / 3;
+  }
+
+  #rec-hero {
+    grid-row: 1 / 5;
+    width: unset;
+    height: 20rem;
+  }
+
+  #ingredients {
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-template-areas:
+      "ing_title ing_img"
+      "ing_list ing_img";
+    grid-column-gap: 2rem;
+    grid-template-rows: 2.5rem auto;
+  }
+
+  #rec-info {
+    margin-top: 2rem;
+  }
+
+  #ingredients h3 {
+    grid-area: ing_title;
+  }
+
+  #ingredients img {
+    grid-area: ing_img;
+  }
+
+  #ing_list {
+    grid-area: ing_list;
+  }
+
+  #tools {
+    display: grid;
+    grid-template-columns: 35% auto;
+    grid-template-areas:
+      "tool_title tool_img"
+      "tool_desc tool_img";
+    grid-column-gap: 2rem;
+    grid-template-rows: 2.5rem auto;
+  }
+
+  #tools h3 {
+    grid-area: tool_title;
+  }
+
+  #tools img {
+    grid-area: tool_img;
+    width: unset;
+    height: 30rem;
+  }
+
+  #tools p {
+    grid-area: tool_desc;
+  }
+
+  #dir_list li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "step_name step_img"
+      "step_info step_img";
+    grid-template-rows: 2rem auto;
+    grid-column-gap: 2rem;
+  }
+
+  #dir_list h4 {
+    grid-area: step_name;
+  }
+
+  .step_img {
+    grid-area: step_img;
+  }
+
+  #dir_list p {
+    grid-area: step_info;
   }
 }
