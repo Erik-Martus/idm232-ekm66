@@ -40,7 +40,7 @@
         <span></span>
       </button>
     </div> <!-- End top nav -->
-    <div class="hidden" id="menu">
+    <div class="menu_hidden" id="menu">
       <span id="search">
         <object id="search_icon" data="img/icons/search_icon.svg" type="image/svg+xml">
           <!-- put in png -->
