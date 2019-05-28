@@ -11,10 +11,24 @@
   <link rel="stylesheet" href="https://use.typekit.net/qzq6gzd.css">
   <link rel="stylesheet" href="css/main.css">
 
+  <style>
+    #hero {
+      /* background: center / contain #fff url(../img/hero/couple_cooking.jpg) */
+      background-color: #fff;
+      background-image: url(img/hero/couple_cooking.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+
   <title>Home Chef</title>
+
 </head>
 <body>
-  <header>
+  <!-- <header>
     <div id="top_bar">
       <a id="logo" href="index.php">
         <svg id="hc-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 65">
@@ -39,11 +53,10 @@
         <span></span>
         <span></span>
       </button>
-    </div> <!-- End top nav -->
+    </div>
     <div class="menu_hidden" id="menu">
       <span id="search">
         <object id="search_icon" data="img/icons/search_icon.svg" type="image/svg+xml">
-          <!-- put in png -->
         </object>
         <form action="">
           <input type="search" name="search" id="search" placeholder="Search Recipes">
@@ -104,4 +117,57 @@
         <a href="contact.php" class="nav_link red-btn">Contact Us</a>
       </nav>
     </div>
-  </header>
+  </header> -->
+
+  <section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!">Logo</a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#!">Home</a>
+        </li>
+        <li>
+          <a href="#!">About</a>
+        </li>
+        <li>
+          <a href="#!">Services</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!">Web Design</a>
+            </li>
+            <li>
+              <a href="#!">Web Development</a>
+            </li>
+            <li>
+              <a href="#!">Graphic Design</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Pricing</a>
+        </li>
+        <li>
+          <a href="#!">Portfolio</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!">Web Design</a>
+            </li>
+            <li>
+              <a href="#!">Web Development</a>
+            </li>
+            <li>
+              <a href="#!">Graphic Design</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#!">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>

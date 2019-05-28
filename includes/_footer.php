@@ -21,10 +21,7 @@
     </div>
   </footer>
 
-  <?php
-    include "includes/_alpha_links.php"
-  ?>
-
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="js/nav.js"></script>
 </body>
 </html>
