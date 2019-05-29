@@ -189,14 +189,14 @@ nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
-  color: #ffffff;
+  background: var(--clr_gray-light);
   text-decoration: none;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 nav ul li a:hover,
 nav ul li a:visited:hover {
-  background: #2581DC;
+  background: var(--clr_red-dark);
   color: #ffffff;
 }
 

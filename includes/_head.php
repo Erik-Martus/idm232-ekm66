@@ -52,7 +52,10 @@
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
-          <a href="#!">Home</a>
+          <form action="">
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search">
+          </form>
         </li>
         <li>
           <a href="#!">About</a>
