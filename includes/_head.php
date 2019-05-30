@@ -31,105 +31,144 @@
 <header class="navigation">
   <div class="nav-container">
     <div class="brand">
-    
-    <a href="index.php">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 65">
-        <g id="hc-logo-svg">
-          <g id="hc-logo-home">
-            <path fill="#CC0033" d="M9.5,5.9h5.7l-0.9,2.3l-1.8,13.2l0.4,0.5h3.5l0.6-0.5l1.8-13.2l-0.2-2.3h5.7l-0.9,2.3l-4.5,32l0.3,2.2h-5.7 l0.8-2.2L16.2,27l-0.4-0.5h-3.5L11.6,27L9.8,40.2l0.3,2.2H4.4l0.9-2.2l4.5-32L9.5,5.9z"/>
-            <path fill="#CC0033" d="M40.7,8.2l-4.5,32l-2.6,2.3h-9.1l-2-2.3l4.5-32l2.6-2.3h9.1L40.7,8.2z M35.3,10.5h-3.5l-0.6,0.5l-3.7,26.3 l0.4,0.5h3.5l0.6-0.5l3.7-26.3L35.3,10.5z"/>
-            <path fill="#CC0033" d="M52.8,30.5h-2.3l-3-12.4l-3.1,22.2l0.3,2.2H39l0.9-2.2l4.5-32l-0.2-2.3h5.1l3.8,15l8-15h5.1l-0.9,2.3l-4.5,32 l0.3,2.2h-5.7l0.9-2.2L59.3,18L52.8,30.5z"/>
-            <path fill="#CC0033" d="M63.8,42.4l0.9-2.3l4.5-32l-0.2-2.2h13.7l0.1,5l-2.3-0.5h-6.5L73.3,11l-1.4,10.4l0.4,0.5h1.8l2.4-0.6L75.6,27l-2.2-0.6h-1.8L71,26.9l-1.4,10.3l0.4,0.5h6.5l2.4-0.5l-1.5,5.1H63.8z"/>
+      <a href="index.php">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 65">
+          <g id="hc-logo-svg">
+            <g id="hc-logo-home">
+              <path fill="#CC0033" d="M9.5,5.9h5.7l-0.9,2.3l-1.8,13.2l0.4,0.5h3.5l0.6-0.5l1.8-13.2l-0.2-2.3h5.7l-0.9,2.3l-4.5,32l0.3,2.2h-5.7 l0.8-2.2L16.2,27l-0.4-0.5h-3.5L11.6,27L9.8,40.2l0.3,2.2H4.4l0.9-2.2l4.5-32L9.5,5.9z"/>
+              <path fill="#CC0033" d="M40.7,8.2l-4.5,32l-2.6,2.3h-9.1l-2-2.3l4.5-32l2.6-2.3h9.1L40.7,8.2z M35.3,10.5h-3.5l-0.6,0.5l-3.7,26.3 l0.4,0.5h3.5l0.6-0.5l3.7-26.3L35.3,10.5z"/>
+              <path fill="#CC0033" d="M52.8,30.5h-2.3l-3-12.4l-3.1,22.2l0.3,2.2H39l0.9-2.2l4.5-32l-0.2-2.3h5.1l3.8,15l8-15h5.1l-0.9,2.3l-4.5,32 l0.3,2.2h-5.7l0.9-2.2L59.3,18L52.8,30.5z"/>
+              <path fill="#CC0033" d="M63.8,42.4l0.9-2.3l4.5-32l-0.2-2.2h13.7l0.1,5l-2.3-0.5h-6.5L73.3,11l-1.4,10.4l0.4,0.5h1.8l2.4-0.6L75.6,27l-2.2-0.6h-1.8L71,26.9l-1.4,10.3l0.4,0.5h6.5l2.4-0.5l-1.5,5.1H63.8z"/>
+            </g>
+            <g id="hc-logo-chef">
+              <path fill="#CC0033" d="M80.5,58.1l4.5-32l2.6-2.3h9.1l1.9,2.3l-0.6,4.6l0.2,2.2h-5.7l1-2.2l0.2-1.8l-0.4-0.5h-3.6L89.2,29l-3.7,26.3l0.4,0.5h3.6l0.6-0.5l0.2-1.8L90,51.3h5.7l-0.9,2.2l-0.6,4.7l-2.6,2.3h-9.1L80.5,58.1z"/>
+              <path fill="#CC0033" d="M102.2,23.9h5.7l-0.9,2.3l-1.8,13.2l0.4,0.5h3.5l0.6-0.5l1.8-13.2l-0.2-2.3h5.7l-0.9,2.3l-4.5,32l0.3,2.2 h-5.7l0.8-2.2l1.9-13.2l-0.4-0.5H105l-0.6,0.5l-1.9,13.2l0.3,2.2h-5.7l0.9-2.2l4.5-32L102.2,23.9z"/>
+              <path fill="#CC0033" d="M114.7,60.4l0.9-2.3l4.5-32l-0.2-2.2h13.7l0.1,5l-2.3-0.5h-6.5l-0.6,0.5l-1.4,10.4l0.4,0.5h1.8l2.4-0.6 l-0.8,5.7l-2.2-0.6h-1.8l-0.6,0.5l-1.4,10.3l0.4,0.5h6.5l2.4-0.5l-1.5,5.1H114.7z"/>
+              <path fill="#CC0033" d="M136.2,23.9h13.7l0.1,5l-2.3-0.5h-6.5l-0.6,0.5l-1.4,10.4l0.4,0.5h1.8l2.3-0.6l-0.8,5.7l-2.1-0.6H139 l-0.6,0.5l-1.8,13.2l0.2,2.3h-5.7l0.9-2.3l4.5-32L136.2,23.9z"/>
+            </g>
           </g>
-          <g id="hc-logo-chef">
-            <path fill="#CC0033" d="M80.5,58.1l4.5-32l2.6-2.3h9.1l1.9,2.3l-0.6,4.6l0.2,2.2h-5.7l1-2.2l0.2-1.8l-0.4-0.5h-3.6L89.2,29l-3.7,26.3l0.4,0.5h3.6l0.6-0.5l0.2-1.8L90,51.3h5.7l-0.9,2.2l-0.6,4.7l-2.6,2.3h-9.1L80.5,58.1z"/>
-            <path fill="#CC0033" d="M102.2,23.9h5.7l-0.9,2.3l-1.8,13.2l0.4,0.5h3.5l0.6-0.5l1.8-13.2l-0.2-2.3h5.7l-0.9,2.3l-4.5,32l0.3,2.2 h-5.7l0.8-2.2l1.9-13.2l-0.4-0.5H105l-0.6,0.5l-1.9,13.2l0.3,2.2h-5.7l0.9-2.2l4.5-32L102.2,23.9z"/>
-            <path fill="#CC0033" d="M114.7,60.4l0.9-2.3l4.5-32l-0.2-2.2h13.7l0.1,5l-2.3-0.5h-6.5l-0.6,0.5l-1.4,10.4l0.4,0.5h1.8l2.4-0.6 l-0.8,5.7l-2.2-0.6h-1.8l-0.6,0.5l-1.4,10.3l0.4,0.5h6.5l2.4-0.5l-1.5,5.1H114.7z"/>
-            <path fill="#CC0033" d="M136.2,23.9h13.7l0.1,5l-2.3-0.5h-6.5l-0.6,0.5l-1.4,10.4l0.4,0.5h1.8l2.3-0.6l-0.8,5.7l-2.1-0.6H139 l-0.6,0.5l-1.8,13.2l0.2,2.3h-5.7l0.9-2.3l4.5-32L136.2,23.9z"/>
-          </g>
-        </g>
-      </svg>
-    </a>
+        </svg>
+      </a>
     </div>
+
+    <div class="search">
+      <a href="search.php">
+      <svg id="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+        <g>
+          <g>
+            <path fill="#1A1A1A" d="M15.8,3.2c6.6,0,12,5.4,12,12s-5.4,12-12,12s-12-5.4-12-12S9.1,3.2,15.8,3.2 M15.8,0.2 c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S24,0.2,15.8,0.2L15.8,0.2z"/>
+        </g>
+        <g>
+            <line x1="25.9" x2="34.3" y1="25.8" y2="34.3" fill="none" stroke="#1A1A1A" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        </g>
+    </g>
+</svg>
+      </a>
+    </div>
+
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
           <a href="index.php">Home</a>
         </li>
-        <li>
+        <!-- <li>
           <form action="">
             <label for="search">Search</label>
             <input type="search" name="search" id="search">
           </form>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <a href="#!">Filters</a>
           <ul class="nav-dropdown">
             <form action="">
               <li>
                 <h4>Main Ingredient</h4>
                 <span class="form-item">
-                  <input type="checkbox" name="beef" id="beef">
-                  <label for="beef">Beef</label>
+                  <input type="checkbox" name="ing-beef" id="ing-beef">
+                  <label for="ing-beef">Beef</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="chicken" id="chicken">
-                  <label for="chicken">Chicken</label>
+                  <input type="checkbox" name="ing-chx" id="ing-chx">
+                  <label for="ing-chx">Chicken</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="pasta" id="pasta">
-                  <label for="pasta">Pasta</label>
+                  <input type="checkbox" name="ing-past" id="ing-past">
+                  <label for="ing-past">Pasta</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="pork" id="pork">
-                  <label for="pork">Pork</label>
+                  <input type="checkbox" name="ing-pork" id="ing-pork">
+                  <label for="ing-pork">Pork</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="vegetables" id="vegetables">
-                  <label for="vegetables">Vegetables</label>
+                  <input type="checkbox" name="ing-vege" id="ing-vege">
+                  <label for="ing-vege">Vegetables</label>
                 </span>
               </li>
               <li>
                 <h4>Cuisine</h4>
                 <span class="form-item">
-                  <input type="checkbox" name="american" id="american">
-                  <label for="american">American</label>
+                  <input type="checkbox" name="cuis-amer" id="cuis-amer">
+                  <label for="cuis-amer">American</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="asian" id="asian">
-                  <label for="asian">Asian</label>
+                  <input type="checkbox" name="cuis-asia" id="cuis-asia">
+                  <label for="cuis-asia">Asian</label>
                 </span>
                 <span class="form-item">
-                  <input type="checkbox" name="italian" id="italian">
-                  <label for="italian">Italian</label>
+                  <input type="checkbox" name="cuis-ital" id="cuis-ital">
+                  <label for="cuis-ital">Italian</label>
                 </span>
               </li>
               <li>
-                <a href="#!">Graphic Design</a>
+                <h4>Cook Time</h4>
+                <span class="form-item">
+                  <input type="checkbox" name="time-twenty" id="time-twenty">
+                  <label for="time-twenty">20 Minutes</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="time-thirty" id="time-thirty">
+                  <label for="time-thirty">30 Minutes</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="time-forfive" id="time-forfive">
+                  <label for="time-fortyfive">45 Minutes</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="time-hour" id="time-hour">
+                  <label for="time-hour">1 Hour</label>
+                </span>
+              </li>
+              <li>
+                <h4>Servings</h4>
+                <span class="form-item">
+                  <input type="checkbox" name="two" id="two">
+                  <label for="two">2 servings</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="serv-three" id="serv-three">
+                  <label for="serv-three">3 Servings</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="serv-four" id="serv-four">
+                  <label for="serv-four">4 Servings</label>
+                </span>
+                <span class="form-item">
+                  <input type="checkbox" name="hour" id="hour">
+                  <label for="hour">1 Hour</label>
+                </span>
               </li>
             </form>
           </ul>
+        </li> -->
+        <li>
+          <a href="#!">All Recipes</a>
         </li>
         <li>
-          <a href="#!">Pricing</a>
+          <a href="#!">About Us</a>
         </li>
         <li>
-          <a href="#!">Portfolio</a>
-          <ul class="nav-dropdown">
-            <li>
-              <a href="#!">Web Design</a>
-            </li>
-            <li>
-              <a href="#!">Web Development</a>
-            </li>
-            <li>
-              <a href="#!">Graphic Design</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#!">Contact</a>
+          <a href="#!">Contact Us</a>
         </li>
       </ul>
     </nav>
