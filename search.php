@@ -12,85 +12,113 @@
             </g>
           </svg>
         </div>
-        <div id="filter_options">
+        <div id="filter_options" class="collapse">
           <div class="category">
             <h4>Entree</h4> <!-- TODO: get accent thing for first e -->
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-beef" id="ing-beef">
-              <label for="ing-beef">Beef</label>
+            <span>
+              <label class="option" for="ing-beef">Beef
+                <input type="checkbox" name="ing-beef" id="ing-beef">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-chx" id="ing-chx">
-              <label for="ing-chx">Chicken</label>
+            <span>
+              <label class="option" for="ing-chx">Chicken
+                <input type="checkbox" name="ing-chx" id="ing-chx">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-chx" id="ing-chx">
-              <label for="ing-chx">Chicken</label>
+            <span>
+              <label class="option" for="ing-past">Pasta
+                <input type="checkbox" name="ing-past" id="ing-past">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-past" id="ing-past">
-              <label for="ing-past">Pasta</label>
+            <span>
+              <label class="option" for="ing-pork">Pork
+                <input type="checkbox" name="ing-pork" id="ing-pork">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-pork" id="ing-pork">
-              <label for="ing-pork">Pork</label>
-            </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="ing-veg" id="ing-veg">
-              <label for="ing-veg">Vegetables</label>
+            <span>
+              <label class="option" for="ing-veg">Vegetables
+                <input type="checkbox" name="ing-veg" id="ing-veg">
+                <span class="check"></span>
+              </label>
             </span>
           </div>
           <div class="category">
             <h4>Cuisine</h4>
-            <span class="option">
-              <input type="checkbox" class="check" name="cuis-amer" id="cuis-amer">
-              <label for="cuis-amer">American</label>
+            <span>
+              <label class="option" for="cuis-amer">American
+                <input type="checkbox" name="cuis-amer" id="cuis-amer">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="cuis-asia" id="cuis-asia">
-              <label for="cuis-asia">Asian</label>
+            <span>
+              <label class="option" for="cuis-asia">Asian
+                <input type="checkbox" name="cuis-asia" id="cuis-asia">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="cuis-ital" id="cuis-ital">
-              <label for="cuis-ital">Italian</label>
+            <span>
+              <label class="option" for="cuis-ital">Italian
+                <input type="checkbox" name="cuis-ital" id="cuis-ital">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="cuis-mex" id="cuis-mex">
-              <label for="cuis-mex">Mexican</label>
+            <span>
+              <label class="option" for="cuis-mex">Mexican
+                <input type="checkbox" name="cuis-mex" id="cuis-mex">
+                <span class="check"></span>
+              </label>
             </span>
           </div>
           <div class="category">
             <h4>Cook Time</h4>
-            <span class="option">
-              <input type="checkbox" class="check" name="time-twenty" id="time-twenty">
-              <label for="time-twenty">20 Minutes</label>
+            <span>
+              <label class="option" for="time-twenty">20 Minutes
+                <input type="checkbox" name="time-twenty" id="time-twenty">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="time-thirty" id="time-thirty">
-              <label for="time-thirty">30 Minutes</label>
+            <span>
+              <label class="option" for="time-thirty">30 Minutes
+                <input type="checkbox" name="time-thirty" id="time-thirty">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="time-fortyfive" id="time-fortyfive">
-              <label for="time-fortyfive">45 Minutes</label>
+            <span>
+              <label class="option" for="time-fortyfive">45 Minutes
+                <input type="checkbox" name="time-fortyfive" id="time-fortyfive">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="time-hour" id="time-hour">
-              <label for="time-hour">1 Hour</label>
+            <span>
+              <label class="option" for="time-hour">1 Hour
+                <input type="checkbox" name="time-hour" id="time-hour">
+                <span class="check"></span>
+              </label>
             </span>
           </div>
           <div class="category">
             <h4>Servings</h4>
-            <span class="option">
-              <input type="checkbox" class="check" name="serv-two" id="serv-two">
-              <label for="serv-two">2 servings</label>
+            <span>
+              <label class="option" for="serv-two">2 servings
+                <input type="checkbox" name="serv-two" id="serv-two">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="serv-three" id="serv-three">
-              <label for="serv-three">3 servings</label>
+            <span>
+              <label class="option" for="serv-three">3 servings
+                <input type="checkbox" name="serv-three" id="serv-three">
+                <span class="check"></span>
+              </label>
             </span>
-            <span class="option">
-              <input type="checkbox" class="check" name="serv-four" id="serv-four">
-              <label for="serv-four">4 servings</label>
+            <span>
+              <label class="option" for="serv-four">4 servings
+                <input type="checkbox" name="serv-four" id="serv-four">
+                <span class="check"></span>
+              </label>
             </span>
           </div>
         </div>

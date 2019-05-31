@@ -72,95 +72,6 @@
         <li>
           <a href="index.php">Home</a>
         </li>
-        <!-- <li>
-          <form action="">
-            <label for="search">Search</label>
-            <input type="search" name="search" id="search">
-          </form>
-        </li> -->
-        <!-- <li>
-          <a href="#!">Filters</a>
-          <ul class="nav-dropdown">
-            <form action="">
-              <li>
-                <h4>Main Ingredient</h4>
-                <span class="form-item">
-                  <input type="checkbox" name="ing-beef" id="ing-beef">
-                  <label for="ing-beef">Beef</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="ing-chx" id="ing-chx">
-                  <label for="ing-chx">Chicken</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="ing-past" id="ing-past">
-                  <label for="ing-past">Pasta</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="ing-pork" id="ing-pork">
-                  <label for="ing-pork">Pork</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="ing-vege" id="ing-vege">
-                  <label for="ing-vege">Vegetables</label>
-                </span>
-              </li>
-              <li>
-                <h4>Cuisine</h4>
-                <span class="form-item">
-                  <input type="checkbox" name="cuis-amer" id="cuis-amer">
-                  <label for="cuis-amer">American</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="cuis-asia" id="cuis-asia">
-                  <label for="cuis-asia">Asian</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="cuis-ital" id="cuis-ital">
-                  <label for="cuis-ital">Italian</label>
-                </span>
-              </li>
-              <li>
-                <h4>Cook Time</h4>
-                <span class="form-item">
-                  <input type="checkbox" name="time-twenty" id="time-twenty">
-                  <label for="time-twenty">20 Minutes</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="time-thirty" id="time-thirty">
-                  <label for="time-thirty">30 Minutes</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="time-forfive" id="time-forfive">
-                  <label for="time-fortyfive">45 Minutes</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="time-hour" id="time-hour">
-                  <label for="time-hour">1 Hour</label>
-                </span>
-              </li>
-              <li>
-                <h4>Servings</h4>
-                <span class="form-item">
-                  <input type="checkbox" name="two" id="two">
-                  <label for="two">2 servings</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="serv-three" id="serv-three">
-                  <label for="serv-three">3 Servings</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="serv-four" id="serv-four">
-                  <label for="serv-four">4 Servings</label>
-                </span>
-                <span class="form-item">
-                  <input type="checkbox" name="hour" id="hour">
-                  <label for="hour">1 Hour</label>
-                </span>
-              </li>
-            </form>
-          </ul>
-        </li> -->
         <li>
           <a href="#!">All Recipes</a>
         </li>
@@ -169,6 +80,9 @@
         </li>
         <li>
           <a href="#!">Contact Us</a>
+        </li>
+        <li class="search_link">
+          <a href="search.php">Search</a>
         </li>
       </ul>
     </nav>
