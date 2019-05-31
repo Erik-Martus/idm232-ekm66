@@ -1,3 +1,8 @@
+<?php
+  require_once "includes/_functions.php";
+  require_once "includes/_db.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
