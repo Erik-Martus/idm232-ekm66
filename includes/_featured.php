@@ -33,31 +33,33 @@
     </div>
   </section> -->
 
-<?php
-  $random_id = randomNumber(0, 40, 6);
-  $random_id = join(', ', $random_id);
-  print_r($random_id);
+<section id="featured">
+  <?php
+    $query = "SELECT id, title, hero_image ";
+    $query .= "FROM recipes ";
+    $query .= "ORDER by id ASC";
 
-  $query_info = "SELECT id, title ";
-  $query_info .= "FROM rec_info ";
-  $query_info .= "WHERE id IN ('$random_id')";
-  // $query_info .= "WHERE id = 1";
+    $result = mysqli_query($connection, $query);
 
-  $result_info = mysqli_query($connection, $query_info);
+    if (!$result) {
+      die("Database connection failed.");
+    }
 
-  if (!$result_info) {
-    die("Database connection failed.");
-  }
+    $random_id = randomNumber(1, 40, 6);
 
-  $recipe_name = mysqli_fetch_assoc($result_info);
-  print_r($recipe_name);
-
-  foreach ($recipe_name as $recipe_name) {
-    echo "Recipe Name: {$recipe_name}<br>";
-  }
-
-  // while ($recipe = mysqli_fetch_assoc($result_info)) {
-  //   echo $recipe["title"];
-  //   $recipe++;
-  // }
-?>
+    while($recipe = mysqli_fetch_assoc($result)) {
+      if (in_array($recipe["id"], $random_id)) {
+        ?>
+          <div class="recipe">
+            <img
+              src="img/recipes/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
+              alt="<?php echo $recipe["title"] ?>" class="rec_img"
+            >
+            <h4 class="rec_title"><?php echo $recipe["title"] ?></h4>
+            <a href="<?php echo safeURL("recipe.php", $recipe["id"]) ?>" class="red-btn rec-btn">Get Cooking</a>
+          </div>
+        <?php
+      } // End if
+    } // End while loop
+  ?>
+</section>
