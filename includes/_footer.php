@@ -42,3 +42,5 @@
   <?php include "includes/_alpha_links.php" ?>
 </body>
 </html>
+
+<?php mysqli_close($connection); ?>
