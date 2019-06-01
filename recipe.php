@@ -1,23 +1,43 @@
 <?php
   require "includes/_head.php";
+
+  $id = isset($_GET["id"]) ? $_GET["id"] : null;
+
+  if (!$id) {
+    redirect_to("index.php");
+  } else {
+    $query = 'SELECT * ';
+    $query .= 'FROM recipes ';
+    $query .= "WHERE id = '{$id}' ";
+    $query .= 'LIMIT 1';
+    $result = mysqli_query($connection, $query);
+    if (!$result) {
+      die('Database query failed.');
+    }
+  }
+
+  while ($recipe = mysqli_fetch_assoc($result)) {
 ?>
+
 
   <main>
     <div id="rec-wrap">
-        <img id="rec-hero" src="img/recipes/01/0101_FPP_Chicken-Rice_97338_WEB_SQ_hi_res.jpg" alt="Ancho-Orange Chicken">
-        <h1 id="rec-title">Ancho-Orange Chicken</h1>
-        <h2 id="rec-sides">with Kale, Rice & Roasted Carrots</h2>
+        <img id="rec-hero" 
+          src="img/recipes/<?php echo $id . "/" . $recipe["hero_image"] ?>" 
+          alt="<?php echo $recipe["title"] ?>">
+        <h1 id="rec-title"><?php echo $recipe["title"] ?></h1>
+        <h2 id="rec-sides">with <?php echo $recipe["side"] ?></h2>
   
       <!-- Cook time, servings, nutrition -->
       <section id="rec-stats">
-        <div class="info">45 Minutes</div>
-        <div class="info">4 Servings</div>
-        <div class="info">600 Cals.</div>
+        <div class="info"><?php echo $recipe["time"] ?> Minutes</div>
+        <div class="info"><?php echo $recipe["servings"] ?> Servings</div>
+        <div class="info"><?php echo $recipe["nutrition"] ?> Cals.</div>
       </section>
   
       <div id="rec-desc" class="rec">
         <p>
-          Weʼre amping up chicken breasts with a glaze of smoky ancho chile paste and fresh orange juice in this recipe. On the side, roasted carrots and lightly creamy, golden raisin-studded rice perfectly accent the sweetness of the glaze.
+          <?php echo $recipe["description"] ?>
         </p>
       </div>
   
@@ -26,20 +46,19 @@
         <section id="ingredients">
           <h3>Ingredients</h3>
           
-          <img src="img/recipes/01/0101_ING_FPP_large_feature.png" alt="Ingredients">
+          <img src="img/recipes/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="Ingredients">
           
           <ul id="ing_list">
-            <li>4  Boneless, Skinless Chicken Breasts</li>
-            <li>1  Lime</li>
-            <li>1 Tbsp  Ancho Chile Paste</li>
-            <li>1 bunch  Kale</li>
-            <li>2 Tbsps  Butter</li>
-            <li>3&frasl;4 cup  Jasmine Rice</li>
-            <li>2 cloves  Garlic</li>
-            <li>2 Tbsps  Crème Fraîche</li>
-            <li>4  Carrots</li>
-            <li>3 Tbsps  Golden Raisins</li>
-            <li>1  Orange</li>
+            <li><?php echo $recipe["ingredients"] ?></li>
+            <?php
+              $ings = explode(";", $recipe["ingredients"]);
+              print_r($ings);
+              foreach ($ings as $ing) {
+                ?>
+                  <li><?php echo $ing ?></li> <!-- Why is this creating charater errors? htmlentities did not work, just removed item+ -->
+                <?php
+              }
+            ?>
           </ul>
         </section> <!-- End Ingredients -->
         
@@ -102,5 +121,7 @@
   </main>
 
 <?php
+  } // end while
+  myqli_free_result($result);
   require "includes/_footer.php";
 ?>
