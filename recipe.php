@@ -49,13 +49,11 @@
           <img src="img/recipes/<?php echo $id . "/" . $recipe["ing_img"] ?>" alt="Ingredients">
           
           <ul id="ing_list">
-            <li><?php echo $recipe["ingredients"] ?></li>
             <?php
               $ings = explode(";", $recipe["ingredients"]);
-              print_r($ings);
               foreach ($ings as $ing) {
                 ?>
-                  <li><?php echo $ing ?></li> <!-- Why is this creating charater errors? htmlentities did not work, just removed item+ -->
+                  <li><?php echo $ing ?></li> <!-- ? Why is this creating charater errors? htmlentities did not work, just removed item+ -->
                 <?php
               }
             ?>
@@ -65,26 +63,51 @@
         <section id="tools">
           <h3>Kitchen Tools</h3>
   
-          <img src="img/kitchen_tools/Garlic_Press9652.jpg" alt="Garlic Press">
-  
+          <img
+            src="img/kitchen_tools/<?php echo $recipe["tool_img"] ?>"
+            alt="<?php echo $recipe["kitchen_tool"] ?>"
+          >
+          <?php
+            if (strpos($recipe["kitchen_tool"], ",")) {
+              $tool_str = explode(",", $recipe["kitchen_tool"]);
+              ?>
+              <h4><?php echo $tool_str[0] ?></h4>
+              <h5><?php echo $tool_str[1] ?></h5>
+              <?php
+            } else {
+              ?>
+              <h4><?php echo $recipe["kitchen_tool"] ?></h4>
+              <?php
+            }
+          ?>
+
           <p>
-            Slicing garlic has never been simpler. This two-sided essential is designed to do two jobs in one: crush garlic and slice it. Made by Harold Import Company, a family-owned American business with over 50 years of experience, this easy-to-use press owes its incredible durability to its heavyweight, stainless steel construction. To use it, simply place the clove in the hopper and press downward for freshly pressed garlic, or flip it over to get uniform slices of garlic. And to ensure minimal mess, it includes a handy cleaning tool for removing leftover pressed garlic after use.
+            <?php echo htmlspecialchars($recipe["kitchen_tool_desc"]) // ? Having touble with HTML special chars 
+            ?>
           </p>
         </section>
   
         <section id="directions">
           <h3>Step-by-Step Directions</h3>
-  
-          <!-- Switch to toggle direction images on and off -->
-          <!-- <div id="img_toggle">
-            <p>Images</p>
-            <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-            <label for="toggle-on" class="btn">On</label>
-            <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-            <label for="toggle-off" class="btn">Off</label>
-          </div> -->
           <ol id="dir_list">
-            <li>
+            <?php 
+              $steps = explode("]\[", $recipe["steps"]);
+              
+              foreach ($steps as $step) { // TODO: Change this to a while loop
+                  $first_letter = substr($step, 0, 1);
+                  $last_letter = substr($step, -1);
+                  if ($first_letter = "[") {
+                    $step = ltrim($step, '[');
+                  }
+                  if ($last_letter = "]") {
+                    $step = rtrim($step, ']');
+                  }
+                ?>
+                  <li><?php echo $step ?></li>
+                <?php
+              }
+            ?>
+            <!-- <li>
               <h4>Cook the rice:</h4>
               <img class="step_img" src="img/recipes/01/0101_FPP_Chicken-Rice_18594_WEB_high_feature.jpg" alt="Cooking rice">
               <p>Place an oven rack in the center of the oven, then preheat to 450°F. In a medium pot, combine the rice, a big pinch of salt, and 1 1/2 cups of water. Heat to boiling on high. Once boiling, cover and reduce the heat to low. Cook 12 to 14 minutes, or until the water has been absorbed and the rice is tender. Turn off the heat and fluff with a fork. Cover to keep warm.</p>
@@ -113,7 +136,7 @@
               <h4>Finish the rice & serve your dish:</h4>
               <img class="step_img" src="img/recipes/01/0101_FPP_Chicken-Rice_18630_WEB_high_feature.jpg" alt="Adding kale to rice pot">
               <p>To the pot of cooked rice and kale, add the lime zest, crème fraîche, raisins, and the juice of the remaining lime half. Stir to combine; season with salt and pepper to taste. Serve the glazed chicken with the finished rice and roasted carrots. Top the chicken with the remaining glaze from the pan. Enjoy!</p>
-            </li>
+            </li> -->
           </ol>
         </section> <!-- End #dir-list -->
       </div> <!-- End #rec-info -->
