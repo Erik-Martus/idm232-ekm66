@@ -39,7 +39,6 @@
   <script src="js/main.js"></script>
   <script src="js/nav.js"></script>
 
-  <?php include "includes/_alpha_links.php" ?>
 </body>
 </html>
 
