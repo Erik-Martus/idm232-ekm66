@@ -1,0 +1,7 @@
+<?php require "includes/_head.php"; ?>
+
+<main>
+
+</main>
+
+<?php require "includes/_footer.php"; ?>
