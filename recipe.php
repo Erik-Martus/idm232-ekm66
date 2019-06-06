@@ -92,8 +92,11 @@
           <ol id="dir_list">
             <?php 
               $steps = explode("]\[", $recipe["steps"]);
-              
-              foreach ($steps as $step) { // TODO: Change this to a while loop
+              $step_img_high = explode("\\", $recipe["step_img_high"]);            
+
+              $i = 0;
+              while ($i < count($steps)) {
+                $step = $steps[$i];
                   $first_letter = substr($step, 0, 1);
                   $last_letter = substr($step, -1);
                   if ($first_letter = "[") {
@@ -102,9 +105,15 @@
                   if ($last_letter = "]") {
                     $step = rtrim($step, ']');
                   }
+                  $step_exp = explode("|", $step);
                 ?>
-                  <li><?php echo $step ?></li>
+                  <li>
+                    <h4><?php echo $step_exp[0] ?></h4>
+                    <img src="img/recipes/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="" class="step_img">
+                    <p><?php echo $step_exp[1] ?></p>
+                  </li>
                 <?php
+                $i++;
               }
             ?>
             <!-- <li>
