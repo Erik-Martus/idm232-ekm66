@@ -11,16 +11,4 @@ function randomNumber($min, $max, $quantity) {
   shuffle($numbers);
   return array_slice($numbers, 0, $quantity);
 }
-
-function safeURL($page, $param) {
-  $url = rawurldecode($page);
-  $url .= "?" . $param . "=" ;
-  if (!is_numeric($param)) {
-    $url .= urldecode($param);
-  } else if (is_numeric($param)) {
-    $url .= $param;
-  }
-
-  return $url;
-}
 ?>
