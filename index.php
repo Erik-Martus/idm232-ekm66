@@ -18,4 +18,7 @@
   <?php include "includes/_featured.php"; ?>
 </main>
 
-<?php require "includes/_footer.php"; ?>
+<?php 
+  require "includes/_footer.php"; 
+  mysqli_free_result($result);
+?>
