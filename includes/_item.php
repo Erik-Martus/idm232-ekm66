@@ -1,8 +1,14 @@
 <div class="recipe">
   <img
-    src="img/recipes/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
-    alt="<?php echo $recipe["title"] ?>" class="rec_img"
-  >
+    srcset="
+      img/recipes/<?php echo $recipe["id"] ?>/thumb_lg.jpg 310w,
+      img/recipes/<?php echo $recipe["id"] ?>/thumb_sm.jpg 128w"
+    sizes="
+      (min-width: 64rem) 21rem,
+      8rem"
+    src="img/recipes/<?php echo $recipe["id"] ?>/thumb_lg.jpg 310w"
+    alt="<?php echo $recipe["title"] ?>"
+    class="rec_img" />
   <h4 class="rec_title"><?php echo $recipe["title"] ?></h4>
   <a href="<?php 
     $rec_url = rawurldecode("recipe.php");

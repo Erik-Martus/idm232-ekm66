@@ -612,6 +612,7 @@ footer {
 /* ! ------------- SEARCH ------------------ ! */
 #search_form {
   position: relative;
+  margin-bottom: 3rem;
 }
 
 #search {

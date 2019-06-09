@@ -1,4 +1,7 @@
-<?php require "includes/_head.php"; ?>
+<?php 
+  require_once "includes/_global.php";
+  $title .= " | All Recipes";
+  require "includes/_head.php"; ?>
 
 <main>
   <section id="all_rec" class="rec_grid">

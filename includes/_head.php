@@ -28,7 +28,12 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
 
-  <title>Home Chef</title>
+  <!-- TODO: Update title to PHP variable -->
+  <title>
+    <?php 
+      echo $title
+    ?>
+  </title>
 
 </head>
 <body>

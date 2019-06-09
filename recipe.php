@@ -1,23 +1,26 @@
 <?php
-  require "includes/_head.php";
+// TODO: Add recipe name to title
+$id = isset($_GET["id"]) ? $_GET["id"] : null;
 
-  $id = isset($_GET["id"]) ? $_GET["id"] : null;
+require_once "includes/_global.php";
 
-  if (!$id) {
-    redirect_to("index.php");
-  } else {
-    $query = 'SELECT * ';
-    $query .= 'FROM recipes ';
-    $query .= "WHERE id = '{$id}' ";
-    $query .= 'LIMIT 1';
-    $result = mysqli_query($connection, $query);
-    if (!$result) {
-      die('Database query failed.');
-    }
+require "includes/_head.php";
+
+if (!$id) {
+  redirect_to("index.php");
+} else {
+  $query = 'SELECT * ';
+  $query .= 'FROM recipes ';
+  $query .= "WHERE id = '{$id}' ";
+  $query .= 'LIMIT 1';
+  $result = mysqli_query($connection, $query);
+  if (!$result) {
+    die('Database query failed.');
   }
+}
 
-  while ($recipe = mysqli_fetch_assoc($result)) {
-?>
+while ($recipe = mysqli_fetch_assoc($result)) {
+  ?>
 
 
   <main>

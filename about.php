@@ -1,4 +1,7 @@
-<?php require "includes/_head.php"; ?>
+<?php 
+  require_once "includes/_global.php";
+  $title .= " | About Us";
+  require "includes/_head.php"; ?>
 
 <main>
   <section id="hero" class="index_hero"></section>
