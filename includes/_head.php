@@ -78,10 +78,10 @@
           <a href="index.php">Home</a>
         </li>
         <li>
-          <a href="#!">All Recipes</a>
+          <a href="browse.php">All Recipes</a>
         </li>
         <li>
-          <a href="#!">About Us</a>
+          <a href="about.php">About Us</a>
         </li>
         <li>
           <a href="#!">Contact Us</a>
