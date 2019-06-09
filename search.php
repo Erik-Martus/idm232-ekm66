@@ -1,4 +1,18 @@
-<?php require "includes/_head.php"; ?>
+<?php
+  require_once "includes/_global.php";
+  $title .= " | Search";
+
+  
+  $search_result = isset($_GET["search"]) ? $_GET["search"] : null;
+
+  print_r($search_result);
+  
+  if (isset($_GET["search"])) {
+    $title .= " - " . $search_result;
+  }
+
+  require "includes/_head.php";
+?>
 
   <main>
     <h1>Search</h1>
@@ -14,61 +28,28 @@
         </div>
         <div id="filter_options" class="collapse">
           <div class="category">
-            <h4>Entree</h4> <!-- TODO: get accent thing for first e -->
-            <span>
-              <label class="option" for="ing-beef">Beef
-                <input type="checkbox" name="ing-beef" id="ing-beef">
-                <span class="check"></span>
-              </label>
-            </span>
-            <span>
-              <label class="option" for="ing-chx">Chicken
-                <input type="checkbox" name="ing-chx" id="ing-chx">
-                <span class="check"></span>
-              </label>
-            </span>
-            <span>
-              <label class="option" for="ing-past">Pasta
-                <input type="checkbox" name="ing-past" id="ing-past">
-                <span class="check"></span>
-              </label>
-            </span>
-            <span>
-              <label class="option" for="ing-pork">Pork
-                <input type="checkbox" name="ing-pork" id="ing-pork">
-                <span class="check"></span>
-              </label>
-            </span>
-            <span>
-              <label class="option" for="ing-veg">Vegetables
-                <input type="checkbox" name="ing-veg" id="ing-veg">
-                <span class="check"></span>
-              </label>
-            </span>
-          </div>
-          <div class="category">
             <h4>Cuisine</h4>
             <span>
               <label class="option" for="cuis-amer">American
-                <input type="checkbox" name="cuis-amer" id="cuis-amer">
+                <input type="radio" name="cuisine[]" value="american" id="cuis-amer">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="cuis-asia">Asian
-                <input type="checkbox" name="cuis-asia" id="cuis-asia">
+                <input type="radio" name="cuisine[]" value="asian" id="cuis-asia">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="cuis-ital">Italian
-                <input type="checkbox" name="cuis-ital" id="cuis-ital">
+                <input type="radio" name="cuisine[]" value="italian" id="cuis-ital">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="cuis-mex">Mexican
-                <input type="checkbox" name="cuis-mex" id="cuis-mex">
+                <input type="radio" name="cuisine[]" value="mexican" id="cuis-mex">
                 <span class="check"></span>
               </label>
             </span>
@@ -77,25 +58,25 @@
             <h4>Cook Time</h4>
             <span>
               <label class="option" for="time-twenty">20 Minutes
-                <input type="checkbox" name="time-twenty" id="time-twenty">
+                <input type="radio" name="time[]" value="20" id="time-twenty">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="time-thirty">30 Minutes
-                <input type="checkbox" name="time-thirty" id="time-thirty">
+                <input type="radio" name="time[]" value="30" id="time-thirty">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="time-fortyfive">45 Minutes
-                <input type="checkbox" name="time-fortyfive" id="time-fortyfive">
+                <input type="radio" name="time[]" value="45" id="time-fortyfive">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="time-hour">1 Hour
-                <input type="checkbox" name="time-hour" id="time-hour">
+                <input type="radio" name="time[]" value="60" id="time-hour">
                 <span class="check"></span>
               </label>
             </span>
@@ -104,19 +85,19 @@
             <h4>Servings</h4>
             <span>
               <label class="option" for="serv-two">2 servings
-                <input type="checkbox" name="serv-two" id="serv-two">
+                <input type="radio" name="serving[]" value="2" id="serv-two">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="serv-three">3 servings
-                <input type="checkbox" name="serv-three" id="serv-three">
+                <input type="radio" name="serving[]" value="3" id="serv-three">
                 <span class="check"></span>
               </label>
             </span>
             <span>
               <label class="option" for="serv-four">4 servings
-                <input type="checkbox" name="serv-four" id="serv-four">
+                <input type="radio" name="serving[]" value="4" id="serv-four">
                 <span class="check"></span>
               </label>
             </span>
@@ -126,20 +107,61 @@
       <input type="submit" value="Search" class="red-btn search-btn">
     </form>
     
-    <?php 
-      // following this search tutorial http://webreference.com/programming/php/search/2.html
-      // probably isn't the best for my use case will look into it
-      // TODO: Ask Beck how his search works and if it is w filters or not
-      if (isset ($_POST['submit'])) {
-        if (isset($_GET['go'])) {
-          
-        } else {
-          include "includes/_featured.php";
+    <section id="rec_results" class="rec_grid">
+      <?php 
+        $search_result_orig = $search_result;
+        $search_result = mysqli_real_escape_string($connection, $search_result);
+  
+        if ($search_result !== null) {
+          $query = "SELECT * ";
+          $query .= "FROM `recipes` ";
+          $query .= "WHERE (`title` LIKE '%{$search_result}%' ";
+          $query .= "OR `side` LIKE '%{$search_result}%' ";
+          $query .= "OR `description` LIKE '%{$search_result}%' ";
+          $query .= "OR `ingredients` LIKE '%{$search_result}%' ";
+          $query .= "OR `steps` LIKE '%{$search_result}%' ";
+          $query .= "OR `tags` LIKE '%{$search_result}%' ";
+          $query .= ")";
         }
-      } else {
-        include "includes/_featured.php";
-      }
-    ?>
+        
+        if(isset($_GET["cuisine"])) {
+          $filter_cuisine = $_GET['cuisine'];
+          $cuisine = array_shift($filter_cuisine);
+
+          $query .= "AND (`tags` LIKE '%{$cuisine}%') ";
+        }
+        
+        if(isset($_GET["time"])) {
+          $filter_time = $_GET['time'];
+          $filter_time = $filter_time[0];
+          $time = (int)$filter_time;
+
+          $query .= "AND (`time` <= $time) ";
+        }
+        
+        if(isset($_GET["serving"])) {
+          $filter_serving = $_GET['serving'];
+          $filter_serving = $filter_serving[0];
+          $serving = (int)$filter_serving;
+
+          $query .= "AND (`servings` <= $serving) ";
+        }
+
+        $result = mysqli_query($connection, $query);
+    
+        if (!$result) {
+          die("Database connection failed.");
+        }
+        elseif (mysqli_num_rows($result) == 0) {
+          print_r("No results");
+        }
+        else {
+          while($recipe = mysqli_fetch_assoc($result)) {
+            include "includes/_item.php";
+          } // End while loop
+        }
+      ?>
+    </section>
     
   </main>
 
