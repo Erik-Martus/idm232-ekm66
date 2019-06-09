@@ -2,7 +2,7 @@
 
   <main>
     <h1>Search</h1>
-    <form id="search_form" action="">
+    <form id="search_form" action="search.php?go">
       <input type="search" name="search" id="search" placeholder="What do you want to cook?">
       <div id="filter">
         <div id="filter_toggle">
@@ -123,9 +123,17 @@
           </div>
         </div>
       </div> <!-- End filter -->
+      <input type="submit" value="Search" class="red-btn search-btn">
     </form>
     
-    <?php include "includes/_featured.php" ?>
+    <?php 
+      if (isset ($_POST['submit'])) {
+
+      } else {
+        include "includes/_featured.php";
+      }
+    ?>
+    
   </main>
 
 <?php require "includes/_footer.php"; ?>
