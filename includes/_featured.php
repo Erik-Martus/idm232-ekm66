@@ -1,5 +1,6 @@
 <!-- Featured Recipes -->
-<section id="featured">
+<section id="featured" class="rec_grid">
+  <h2>Featured Recipes</h2>
   <?php
     $query = "SELECT id, title, hero_image ";
     $query .= "FROM recipes ";
@@ -15,21 +16,7 @@
 
     while($recipe = mysqli_fetch_assoc($result)) {
       if (in_array($recipe["id"], $random_id)) {
-        ?>
-          <div class="recipe">
-            <img
-              src="img/recipes/<?php echo $recipe["id"] . "/" . $recipe["hero_image"] ?>"
-              alt="<?php echo $recipe["title"] ?>" class="rec_img"
-            >
-            <h4 class="rec_title"><?php echo $recipe["title"] ?></h4>
-            <a href="<?php 
-              $rec_url = rawurldecode("recipe.php");
-              $rec_url .= "?" . "id=" . urldecode($recipe["id"]);
-
-              echo htmlspecialchars($rec_url);
-            ?>" class="red-btn rec-btn">Get Cooking</a>
-          </div>
-        <?php
+        include "includes/_item.php";
       } // End if
     } // End while loop
   ?>
