@@ -127,8 +127,15 @@
     </form>
     
     <?php 
+      // following this search tutorial http://webreference.com/programming/php/search/2.html
+      // probably isn't the best for my use case will look into it
+      // TODO: Ask Beck how his search works and if it is w filters or not
       if (isset ($_POST['submit'])) {
-
+        if (isset($_GET['go'])) {
+          
+        } else {
+          include "includes/_featured.php";
+        }
       } else {
         include "includes/_featured.php";
       }
