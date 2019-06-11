@@ -13,7 +13,16 @@
 ?>
 
   <main>
-    <h1>Search</h1>
+    <h1>
+      <?php
+        if (isset($_GET["search"])) {
+          echo $_GET["search"]; 
+          // TODO: Capitalize search
+        } else {
+          echo "Browse Our Recipes";
+        }
+      ?>
+    </h1>
     <form id="search_form" action="browse.php?go">
       <input type="search" name="search" id="search" placeholder="What do you want to cook?">
       <div id="filter">
@@ -153,7 +162,7 @@
         elseif (mysqli_num_rows($result) == 0) {
           print_r("No results");
         }
-        elseif (mysqli_num_rows($result) >= 1) {
+        else {
           while($recipe = mysqli_fetch_assoc($result)) {
             include "includes/_item.php";
           } // End while loop
