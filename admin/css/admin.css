@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr_gray_light: #eeeeee;
+  --clr_gray_dark: #252525;
+  --clr_black: #1b1b1b;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--clr_black);
+}
+
+/* ! ------------------- HEADER ------------------- */
+header {
+  display: flex;
+  background-color: var(--clr_gray_dark);
+  align-items: center;
+  color: var(--clr_gray_light);
+}
+
+#hc-logo {
+  height: 3rem;
+  position: relative;
+  top: .25rem;
+  width: 9rem;
+}
+
+#hc-logo-svg {
+  display: block;
+  position: relative;
+  height: 2rem;
+}
+
+#hc-logo-svg path {
+  fill: var(--clr_gray_light);
+}
+
+#hc-logo-chef {
+  transform: translateY(-1.15rem) translateX(.5rem);
+}
+
+/* ! ------------------- NAV ------------------- */
+#icon-pencil {
+  height: 2rem;
+}
+
+.nav_link {
+  background-color: #8e8e8e;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem .5rem .5rem;
+}
