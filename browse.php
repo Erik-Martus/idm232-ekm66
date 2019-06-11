@@ -110,7 +110,7 @@
           </div>
         </div>
       </div> <!-- End filter -->
-      <input type="submit" value="Search" class="red-btn search-btn">
+      <input type="submit" value="Search" class="red-btn submit-btn">
     </form>
     
     <section id="rec_results" class="rec_grid">
