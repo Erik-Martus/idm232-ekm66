@@ -30,7 +30,6 @@
       <ul>
         <li class="foot_link"><a href="index.php">Home</a></li>
         <li class="foot_link"><a href="about.php">About Us</a></li>
-        <li class="foot_link"><a href="contact.php">Contact Us</a></li>
         <li class="foot_link"><a href="support.php">Support</a></li>
       </ul>
     </div>
