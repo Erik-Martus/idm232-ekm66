@@ -16,8 +16,7 @@
     <h1>
       <?php
         if (isset($_GET["search"])) {
-          echo $_GET["search"]; 
-          // TODO: Capitalize search
+          echo ucfirst($_GET["search"]);
         } else {
           echo "Browse Our Recipes";
         }
