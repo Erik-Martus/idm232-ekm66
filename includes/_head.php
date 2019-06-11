@@ -61,20 +61,20 @@
       </a>
     </div>
 
-    <div class="search">
+    <!-- <div class="search">
       <a href="search.php">
-      <svg id="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-        <g>
+        <svg id="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
           <g>
-            <path fill="#1A1A1A" d="M15.8,3.2c6.6,0,12,5.4,12,12s-5.4,12-12,12s-12-5.4-12-12S9.1,3.2,15.8,3.2 M15.8,0.2 c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S24,0.2,15.8,0.2L15.8,0.2z"/>
-        </g>
-        <g>
-            <line x1="25.9" x2="34.3" y1="25.8" y2="34.3" fill="none" stroke="#1A1A1A" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
-        </g>
-    </g>
-</svg>
+            <g>
+              <path fill="#1A1A1A" d="M15.8,3.2c6.6,0,12,5.4,12,12s-5.4,12-12,12s-12-5.4-12-12S9.1,3.2,15.8,3.2 M15.8,0.2 c-8.3,0-15,6.7-15,15s6.7,15,15,15s15-6.7,15-15S24,0.2,15.8,0.2L15.8,0.2z"/>
+            </g>
+            <g>
+              <line x1="25.9" x2="34.3" y1="25.8" y2="34.3" fill="none" stroke="#1A1A1A" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+            </g>
+          </g>
+        </svg>
       </a>
-    </div>
+    </div> -->
 
     <nav>
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
@@ -91,9 +91,9 @@
         <li>
           <a href="#!">Contact Us</a>
         </li>
-        <li class="search_link">
+        <!-- <li class="search_link">
           <a href="search.php">Search</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
   </div>
