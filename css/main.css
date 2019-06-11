@@ -931,6 +931,11 @@ footer {
     width: 100%;
     max-width: 21rem;
     height: 28rem;
+    grid-template-rows: 20.5rem 4rem 2.725rem;
+  }
+
+  .recipe::after {
+    content: none;
   }
 
   .recipe h4 {
@@ -940,19 +945,6 @@ footer {
   .recipe a {
     justify-self: center;
     width: 16rem;
-  }
-
-  .recipe:nth-last-child(-n+2)::after {
-    content: '';
-  }
-
-  .recipe:nth-last-child(-n+3)::after {
-    content: none;
-  }
-
-  .recipe:nth-child(3n+1):nth-last-child(-n+3),
-  .recipe:nth-child(3n+1):nth-last-child(-n+3)~.recipe::after {
-    content: none;
   }
 
   #rec-wrap {
