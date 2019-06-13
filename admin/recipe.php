@@ -11,24 +11,27 @@ if (isset($_GET["id"])) {
   $safe_id = mysqli_real_escape_string($connection, $id);
 }
 
-  if (isset($safe_id)) {
-    $query = 'SELECT * ';
-    $query .= 'FROM recipes ';
-    $query .= "WHERE id = {$safe_id} ";
-    $query .= 'LIMIT 1';
 
-    $result = mysqli_query($connection, $query);
 
-    if (!$result) {
-      die('Database query failed.');
-    }
+if (isset($safe_id)) {
+  $query = 'SELECT * ';
+  $query .= 'FROM recipes ';
+  $query .= "WHERE id = {$safe_id} ";
+  $query .= 'LIMIT 1';
 
-    while ($recipe = mysqli_fetch_assoc($result)) {
+  $result = mysqli_query($connection, $query);
+
+  if (!$result) {
+    die('Database query failed.');
+  }
+
+
+  while ($recipe = mysqli_fetch_assoc($result)) {
 
 ?>
 
 <main>
-  <form action="recipe.php?go" id="rec-form">
+  <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>?id=<?php echo $safe_id; ?>" id="rec-form">
     <h2>General Recipe Information</h2>
     <div class="input-cont">
       <label for="rec-title">Recipe Title</label>
