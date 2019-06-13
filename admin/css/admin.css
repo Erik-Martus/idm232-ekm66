@@ -321,3 +321,13 @@ label {
   outline: 1px dotted #000;
   outline: -webkit-focus-ring-color auto 5px;
 }
+
+.file-label>span {
+  position: absolute;
+  left: 11rem;
+  font-size: .8rem;
+  font-weight: 400;
+  width: 23rem;
+  display: inline-block;
+  color: var(--clr_gray_dark);
+}
