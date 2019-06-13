@@ -41,8 +41,8 @@
 <h1>Admin Panel</h1>
 <form action="index.php?go" id="admin_search">
   <div class="form_item">
-    <input type="search" name="search" id="search">
-    <input type="submit" value="Search">
+    <input type="search" name="search" id="search" placeholder="Search recipes&hellip;">
+    <input type="submit" value="Search" class="search-btn">
   </div>
 </form>
 </header>
