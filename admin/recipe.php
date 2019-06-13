@@ -45,6 +45,12 @@ if (isset($_GET["id"])) {
     </div>
     
     <div class="input-cont">
+      <label for="rec-hero">Main Image</label>
+      <input type="file" name="rec-hero" class="form-item input-file" accept="image/jpg, image/png">
+      <label for="rec-hero" class="file-lable">Please select a file</label>
+    </div>
+    
+    <div class="input-cont">
       <label for="rec-thumb_sm">Recipe Thumbnail (Small)</label>
       <input type="text" name="rec-thumb_sm" class="form-item" value="thumb_sm.jpg">
     </div>
@@ -96,7 +102,16 @@ if (isset($_GET["id"])) {
         </ul>
       </div>
       <textarea name="rec-ing" id="rec-ing" class="form-item" cols="30" rows="10">
-        <?php echo $recipe["ingredients"] ?>
+      <ul id="ing_list">
+            <?php
+              $ings = explode(";", $recipe["ingredients"]);
+              foreach ($ings as $ing) {
+                ?>
+                  <li><?php echo $ing ?></li>
+                <?php
+              }
+            ?>
+          </ul>
       </textarea>
     </div>
 
@@ -113,7 +128,11 @@ if (isset($_GET["id"])) {
     <div class="input-cont">
       <label for="rec-tool_desc">Kitchen Tool Description</label>
       <textarea name="rec-tool_desc" id="rec-tool_desc" class="form-item" cols="30" rows="10">
-        <?php echo $recipe["kitchen_tool_desc"] ?>
+        <p>
+          <?php
+            echo $recipe["kitchen_tool_desc"]
+          ?>
+        </p>
       </textarea>
     </div>
 
@@ -125,8 +144,51 @@ if (isset($_GET["id"])) {
       <div class="input-cont">
         <label for="rec-step_desc">Step Instruction</label>
         <p class="instructions">Please submit a multilevel list</p>
+        <div class="example">
+          <p>Example:</p>
+          <ol>
+            <li>Step ont title
+              <ol>
+                <li>Step two description</li>
+              </ol>
+            </li>
+            <li>Step two title
+              <ol>
+                <li>Step two description</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
         <textarea name="rec-step" id="rec-step" class="form-item" cols="30" rows="10">
-          <?php echo $recipe["steps"] ?>
+        <ol id="dir_list">
+            <?php 
+              $steps = explode("]\[", $recipe["steps"]);           
+
+              $i = 0;
+              while ($i < count($steps)) {
+                $step = $steps[$i];
+                  $first_letter = substr($step, 0, 1);
+                  $last_letter = substr($step, -1);
+                  if ($first_letter = "[") {
+                    $step = ltrim($step, '[');
+                  }
+                  if ($last_letter = "]") {
+                    $step = rtrim($step, ']');
+                  }
+                  $step_exp = explode("|", $step);
+                ?>
+                  <li><?php echo $step_exp[0] ?>
+                    <ol>
+                      <li>
+                        <?php echo $step_exp[1] ?>
+                      </li>
+                    </ol>
+                  </li>
+                <?php
+                $i++;
+              }
+            ?>
+          </ol>
         </textarea>
       </div>
 

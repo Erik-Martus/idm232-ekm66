@@ -210,7 +210,6 @@ main {
 
 input.form-item {
   height: 2rem;
-  margin-top: .25rem;
   border-radius: .15rem;
   border: none;
   border: 2px solid var(--clr_gray_dark);
@@ -220,6 +219,7 @@ input.form-item {
 label {
   font-size: 1.15rem;
   font-weight: 600;
+  margin-bottom: .25rem;
 }
 
 #rec-form {
@@ -230,6 +230,43 @@ label {
   margin: .25rem 0 .5rem;
 }
 
+.example {
+  font-size: .8rem;
+}
+
 .example p {
   margin: .5rem 0;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.example li {
+  margin-bottom: .25rem;
+}
+
+.example li>ol {
+  margin-top: .25rem;
+}
+
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.input-file+label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
+
+.input-file:focus+.file-label,
+.input-file+.file-lable:hover {
+  background-color: red;
 }
