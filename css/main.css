@@ -401,6 +401,7 @@ section {
   background-color: var(--clr_gray-light);
   max-width: 45rem;
   width: 100vw;
+  margin-top: 1rem;
 }
 
 .rec_grid {

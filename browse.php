@@ -153,6 +153,10 @@
           $query .= "AND (`servings` <= $serving) ";
         }
 
+        if(isset($query)) {
+          $query .= "ORDER by substring(Title,1,-1)";
+        }
+
         $result = mysqli_query($connection, $query);
     
         if (!$result) {

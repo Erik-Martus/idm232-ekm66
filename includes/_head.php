@@ -1,6 +1,6 @@
 <?php
   require_once "includes/_functions.php";
-  require_once "includes/_db.php"
+  require_once "includes/_db.php";
 ?>
 
 <!DOCTYPE html>
