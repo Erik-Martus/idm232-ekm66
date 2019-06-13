@@ -56,7 +56,7 @@ while ($recipe = mysqli_fetch_assoc($result)) {
               $ings = explode(";", $recipe["ingredients"]);
               foreach ($ings as $ing) {
                 ?>
-                  <li><?php echo $ing ?></li> <!-- ? Why is this creating charater errors? htmlentities did not work, just removed item+ -->
+                  <li><?php echo $ing ?></li>
                 <?php
               }
             ?>
@@ -85,7 +85,7 @@ while ($recipe = mysqli_fetch_assoc($result)) {
           ?>
 
           <p>
-            <?php echo htmlspecialchars($recipe["kitchen_tool_desc"]) // ? Having touble with HTML special chars 
+            <?php echo $recipe["kitchen_tool_desc"]
             ?>
           </p>
         </section>
