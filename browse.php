@@ -63,7 +63,7 @@
             </span>
           </div>
           <div class="category">
-            <h4>Cook Time</h4>
+            <h4 class="cook-time">Cook Time</h4>
             <span>
               <label class="option" for="time-twenty">20 Minutes
                 <input type="radio" name="time[]" value="20" id="time-twenty">
