@@ -1,4 +1,7 @@
-<?php require "includes/_head.php"; ?>
+<?php 
+  require "includes/_global.php";
+  require "includes/_head.php";
+?>
 
 <main>
   <section id="hero" class="index_hero"></section>

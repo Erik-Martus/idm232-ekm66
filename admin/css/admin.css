@@ -331,3 +331,25 @@ label {
   display: inline-block;
   color: var(--clr_gray_dark);
 }
+
+/* ! ------------------- ALERT ------------------- */
+.alert {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 0 0 .25rem .25rem;
+}
+
+.alert-danger {
+  background-color: #f72f2f;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: #50f72f;
+  color: var(--clr_black);
+}
