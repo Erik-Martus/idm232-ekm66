@@ -25,7 +25,7 @@
     <p>We also make sure that our recipes are perfect for portioning. We conveniently label all of recipes according to how many people you can serve. Now you can avoid the awkward moments when you don't prepare enough food for your guests. If it's date night, family night, a party, or the in-laws are over, rest assured that Home Chef has you covered every step of the way.</p>
   </section>
   <section id="action">
-    <h3>All That's left is for you to get out there and start cooking.</h3>
+    <h3>All that's left is for you to get out there and start cooking.</h3>
     <a href="browse.php" class="red-btn rec-btn">See Our Recipes</a>
   </section>
 </main>
