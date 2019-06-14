@@ -1,10 +1,7 @@
 <?php
-// TODO: Add recipe name to title
 $id = isset($_GET["id"]) ? $_GET["id"] : null;
+require_once "includes/_initialize.php";
 
-require_once "includes/_global.php";
-
-require "includes/_head.php";
 
 if (!$id) {
   redirect_to("index.php");
@@ -20,6 +17,13 @@ if (!$id) {
 }
 
 while ($recipe = mysqli_fetch_assoc($result)) {
+require_once "includes/_global.php";
+
+$title .= " | " . $recipe["title"];
+
+require "includes/_head.php";
+
+
   ?>
 
 
@@ -68,18 +72,20 @@ while ($recipe = mysqli_fetch_assoc($result)) {
   
           <img
             src="img/kitchen_tools/<?php echo $recipe["tool_img"] ?>"
-            alt="<?php echo $recipe["kitchen_tool"] ?>"
+            alt="<?php echo htmlentities($recipe["kitchen_tool"]) ?>"
           >
           <?php
             if (strpos($recipe["kitchen_tool"], ",")) {
               $tool_str = explode(",", $recipe["kitchen_tool"]);
               ?>
-              <h4><?php echo $tool_str[0] ?></h4>
-              <h5><?php echo $tool_str[1] ?></h5>
+              <div class="tool-title">
+                <h4><?php echo $tool_str[0] ?></h4>
+                <h5><?php echo $tool_str[1] ?></h5>
+              </div>
               <?php
             } else {
               ?>
-              <h4><?php echo $recipe["kitchen_tool"] ?></h4>
+              <h4 class="tool-title"><?php echo $recipe["kitchen_tool"] ?></h4>
               <?php
             }
           ?>
@@ -112,7 +118,7 @@ while ($recipe = mysqli_fetch_assoc($result)) {
                 ?>
                   <li>
                     <h4><?php echo $step_exp[0] ?></h4>
-                    <img src="img/recipes/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="" class="step_img">
+                    <img src="img/recipes/<?php echo $id . "/" . $step_img_high[$i] ?>" alt="<?php echo $step_exp[0] ?>" class="step_img">
                     <p><?php echo $step_exp[1] ?></p>
                   </li>
                 <?php

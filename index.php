@@ -1,4 +1,6 @@
 <?php 
+  require_once "includes/_initialize.php";
+
   require "includes/_global.php";
   require "includes/_head.php";
 ?>

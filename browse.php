@@ -1,4 +1,6 @@
 <?php
+  require_once "includes/_initialize.php";
+
   require_once "includes/_global.php";
   $title .= " | Recipes";
 
@@ -163,7 +165,12 @@
           die("Database connection failed.");
         }
         elseif (mysqli_num_rows($result) == 0) {
-          print_r("No results");
+          ?>
+            <div id="no-results">
+              <h2>Sorry, we couldn't find any recipes that matched that.</h2>
+              <a href="browse.php" class="red-btn rec-btn">Back to Browse</a>
+            </div>
+          <?php
         }
         else {
           while($recipe = mysqli_fetch_assoc($result)) {

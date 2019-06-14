@@ -1,4 +1,5 @@
 <?php 
+  require_once "includes/_initialize.php";
   require_once "includes/_global.php";
   $title .= " | About Us";
   require "includes/_head.php";

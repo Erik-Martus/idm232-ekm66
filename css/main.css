@@ -360,10 +360,17 @@ section {
 }
 
 .rec-btn {
-  padding: .25rem 1rem;
+  padding: .5rem 1.25rem;
   font-size: .9em;
   font-weight: bold;
   text-align: center;
+}
+
+@media screen and (min-width: 22.5rem) {
+  .rec-btn {
+    padding: .5rem 1.25rem;
+    font-size: 1.15rem;
+  }
 }
 
 #hero {
@@ -409,6 +416,13 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
+#no-results {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 3;
+}
+
 
 .recipe {
   display: grid;
@@ -616,6 +630,8 @@ footer {
 #search_form {
   position: relative;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 #search {
@@ -651,7 +667,7 @@ footer {
   width: 17.5rem;
   overflow-y: hidden;
   transition: height .3s ease-in, padding .05s linear;
-  height: 29.5rem;
+  height: 21.25rem;
 }
 
 .collapse {
@@ -738,13 +754,15 @@ footer {
 }
 
 .submit-btn {
-  width: 6rem;
+  width: 10rem;
   height: 2.5rem;
   font-size: 1.25rem;
-  position: absolute;
+  /*! position: absolute; */
   top: 0;
   right: 0;
   border: none;
+  align-self: center;
+  cursor: pointer;
 }
 
 #fail_icon {
@@ -782,11 +800,6 @@ footer {
   .rec_subtitle {
     font-size: 1.25rem;
     padding: 0.75rem 0;
-  }
-
-  .rec-btn {
-    padding: .5rem 1.25rem;
-    font-size: 1.15rem;
   }
 
   #mission {
@@ -851,12 +864,8 @@ footer {
 /* * ------------- DESKTOP ------------------ * */
 @media screen and (min-width: 64rem) {
   #search_form {
-    width: 35rem;
+    width: 28rem;
     margin-bottom: 2rem;
-  }
-
-  #filter_toggle {
-    right: 7rem;
   }
 
   #filter_options {
@@ -950,14 +959,18 @@ footer {
       "tool_title tool_img"
       "tool_desc tool_img";
     grid-column-gap: 2rem;
-    grid-template-rows: 2.5rem 2rem auto;
+    grid-template-rows: 2.5rem 3.25rem auto;
   }
 
   #tools h3 {
     grid-area: tool_head;
   }
 
-  #tools h4 {
+  .tool-title h4 {
+    margin-bottom: 0;
+  }
+
+  #tools .tool-title {
     grid-area: tool_title;
   }
 
